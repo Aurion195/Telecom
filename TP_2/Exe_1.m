@@ -1,0 +1,12 @@
+N = [1,2 ; 11,12 ; 21,22]
+H = N.*N
+M = N.'
+A = reshape(N, 1, 6)
+%produit = prod(A)
+som = sum(N)
+I = eye(3)
+X = ones(4)
+Y = 0*ones(4)
+Z = magic(5)
+Mat_a = 4*ones(5) + diag([2 2 2 2 2])
+Mat_a(2,:) = [2 3 2 3 2]
