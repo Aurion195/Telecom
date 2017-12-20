@@ -1,0 +1,45 @@
+%Q1
+
+a = randn(1, 10000);
+b = rand(1, 10000);
+
+figure(1)
+hist(a);
+figure(2)
+hist(b);
+
+%Q2
+
+c = wgn(1,1000,0);
+figure(3)
+hist(c);
+%hold on
+x = -5:0.01:5;
+normpdf(x);
+plot(x,normpdf(x));
+%P=1/N *somme x^2
+P =1/1000 * sum (c.^2);
+
+%Q3
+
+d=log(1:1:20);
+d=log(5);
+f=log(900:10:1800);
+Ahr=(1.1*f -0.7)*1 -(1.56*f-0.8);
+PL =69.55 +26.16*f -13.83*log(100)-Ahr +(44.9 -6.55*log(100))*d;
+
+
+plot(f,PL);
+xlabel('frequence')
+ylabel('pathloss')
+
+a=log(1:1:20);
+b=log(900);
+Ahr=(1.1*b -0.7)*1 -(1.56*b-0.8);
+PL =69.55 +26.16*b -13.83*log(100)-Ahr +(44.9 -6.55*log(100))*a;
+xlabel('frequence')
+ylabel('pathloss')
+Ahr=(1.1*b -0.7)*100 -(1.56*b-0.8);
+PL =69.55 +26.16*b -13.83*log(20)-Ahr +(44.9 -6.55*log(20))*a;
+xlabel('frequence')
+ylabel('pathloss')

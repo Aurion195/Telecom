@@ -1,0 +1,29 @@
+%Q1
+I = imread('Voiture.jpg') ;
+
+%Q3
+figure(1)
+imshow(I) ;
+
+%Q4
+I(1,1,:) ;
+
+%Q5
+M(:,:,1) = I(:,:,3); %change les couleurs
+M(:,:,2) = I(:,:,2); %change les couleurs
+M(:,:,3) = I(:,:,1); %change les couleurs
+
+figure(2)
+imshow(M) ;
+
+%Q6
+I2 = I-50; %l'image aparrais moins nette
+
+figure(4)
+imshow(I2) ;
+
+%Q7
+I3 = I*1.5; %L'image semble plus claire
+
+figure(3)
+imshow(I3) ;
